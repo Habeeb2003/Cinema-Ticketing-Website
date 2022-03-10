@@ -195,31 +195,6 @@
 <script src="../javaScript/Index.js"></script>
 <script src="../javaScript/SignIn.js"></script>
 <script src="../javaScript/SignUp.js"></script>
-<script>
-    $('#myModalBtn').click(function() {
-            CheckIfUserIsLoggedIn($(this).html())
-        })
-        function CheckIfUserIsLoggedIn(params, param2) {
-            console.log(params, param2);
-            if (UserBtn.innerHTML == 'Log Out' && params == 'Log Out') {
-                $('#myModal').modal('hide')
-                UserBtn.innerHTML = "Sign In"
-                localStorage.setItem('UserStatus', UserBtn.innerHTML)
-                window.location.href = "./Movie.html"
-            }
-        
-            else if (UserBtn.innerHTML == 'Sign In') {
-                $('#myModal').modal('show')
-                
-                
-            }
-            if (UserBtn.innerHTML == 'Log Out' && params != 'Log Out') {
-                localStorage.setItem('DateSelected', param2)
-                localStorage.setItem('TimeSelected', params)
-                window.location.href = "./BookNow.html"   
-            }
-        }
-    // CheckIfUserIsLoggedIn()
-</script>
+<script src="../javaScript//CheckIfUserIsLoggedI.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
