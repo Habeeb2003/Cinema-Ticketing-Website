@@ -1,0 +1,189 @@
+body main nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #023047;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body main nav #menuButtonDiv {
+  display: none;
+}
+body main nav #menuButtonDiv #openMenBtn {
+  width: 40px;
+}
+body main nav #menuButtonDiv #openMenBtn div {
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+body main nav #menuButtonDiv #openMenBtn div:not(:last-Child) {
+  margin-bottom: 2px;
+}
+body main nav #menuButtonDiv #navMenuSm {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: 350px;
+  background-color: #023047;
+}
+body main nav #menuButtonDiv #navMenuSm #closeMenuDiv {
+  width: 100%;
+  height: 80px;
+  background-color: #FB8500;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+body main nav #menuButtonDiv #navMenuSm #closeMenuDiv #closeMenuBtn {
+  width: 40px;
+  margin-right: 20px;
+}
+body main nav #menuButtonDiv #navMenuSm #closeMenuDiv #closeMenuBtn div {
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+body main nav #menuButtonDiv #navMenuSm #closeMenuDiv #closeMenuBtn div:not(:last-Child) {
+  margin-bottom: 2px;
+}
+body main nav #menuButtonDiv #navMenuSm ul {
+  list-style: none;
+  padding: 0px;
+  height: 270px;
+}
+body main nav #menuButtonDiv #navMenuSm ul li {
+  font-size: 20px;
+  height: 25%;
+  border-bottom: 2px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main nav #menuButtonDiv #navMenuSm ul li a {
+  color: white;
+}
+body main nav #middleNavDiv ul {
+  list-style: none;
+  height: 45px;
+  margin-bottom: 0px;
+  display: flex;
+}
+body main nav #middleNavDiv ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
+}
+body main nav #middleNavDiv ul li a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 4px;
+}
+body main nav #accountSectDiv ul {
+  list-style: none;
+  margin-bottom: 0px;
+  display: flex;
+}
+body main nav #accountSectDiv ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
+}
+body main nav #accountSectDiv ul li a, body main nav #accountSectDiv ul li button {
+  color: white;
+  text-decoration: none;
+  padding: 4px;
+  outline: none !important;
+}
+body main nav .active::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background: #023047;
+  z-index: -1;
+  border: 3px solid transparent;
+}
+body main nav .active::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #FB8500;
+  z-index: -2;
+}
+body main nav .asd::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background: #023047;
+  z-index: -1;
+  border: 3px solid transparent;
+}
+body main nav .asd::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #FB8500;
+  transform: rotate(-90deg) translate(-50%, -110%);
+  transform-origin: top left;
+  transition: transform 0.5s;
+  z-index: -2;
+}
+body main nav .asd:hover:after {
+  transform: rotate(0) translate(0, 0);
+}
+body main #paymentSect {
+  width: 100%;
+  height: 90vh;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main #paymentSect #container {
+  width: 80%;
+  height: 70vh;
+  background-color: white;
+}
+body main #paymentSect #container #paymentType {
+  justify-content: space-evenly;
+  height: 15vh;
+  background-color: #8ECAE6;
+  align-items: center;
+}
+body main #paymentSect #container #paymentType .active {
+  border: 6px solid #FB8500;
+}
+body main #paymentSect #container #formContainer {
+  width: 100%;
+  height: 50vh;
+  background-color: lightblue;
+}
+
+/*# sourceMappingURL=MakePayment.css.map */

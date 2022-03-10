@@ -1,0 +1,509 @@
+$LightConflowerBlue: #8ECAE6;
+$BlueGreen: hsl(192, 70%, 43%);
+$PrussianBlue: #023047;
+$HoneyYellow: #FFB703;
+$Orange: #FB8500;
+
+body{
+    main{
+        .modal_content{
+            // background-color: $HoneyYellow;
+            background-image: linear-gradient(to bottom right, $Orange 15%, $LightConflowerBlue 15%) !important;
+            padding: 30px;
+            .modal_header{
+                h1{
+                    color: $PrussianBlue;
+                }
+                
+            }
+            #signUpBtnDiv{
+                display: flex;
+                justify-content: center;
+                #signUpBtn{
+                    padding: 0;
+                    color: $Orange;
+                    font-weight: bold;
+                }
+            }
+            #userSignIn, #userSignUp{
+                .success input{
+                    border-bottom: 2px solid #2ecc71;
+                }
+                .error input{
+                    border-bottom: 2px solid #e74c3c;
+                }
+                .success i{
+                    color: #2ecc71;
+                    visibility:  visible;
+                }
+                .error i{
+                    color: #e74c3c;
+                    visibility:  visible;
+                }
+                .error small{
+                    color: #e74c3c;
+                    visibility:  visible;
+                }
+                 i{
+                    position: absolute;
+                    top: 20px;
+                    right: 16px;
+                    visibility: hidden;
+                }
+                small{
+                    visibility: hidden;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+                input{
+                    width: 100%;
+                    height: 40px;
+                    border: none;
+                    border-bottom: 2px solid $PrussianBlue;
+                    outline: none;
+                    // padding-bottom: 20px;
+                    margin-bottom: 20px;
+                    background-color: transparent;
+                }
+                span{
+            
+                    font-size: 18px;
+                    position: absolute;
+                    transform: translate(0px, 10px);
+                }
+                .gg{
+                    transition: all 0.7s;
+                    transform: translate(0px, -10px);
+                    font-size: 14px;
+                }
+                .gh{
+                    transition: all 0.7s;
+                    transform: translate(0px, 10px);
+                    font-size: 18px;
+            
+                }
+                div{
+                    position: relative;
+                }
+                #submitBtnDiv{
+                    text-align: center;
+                    #submitBtn{
+                        width: 70%;
+                        font-size: 27px;
+                        color: white;
+                        font-weight: bold;
+                        // height: 60px;
+                        border-radius: 25px;
+                        background-color: $PrussianBlue;
+                    }
+                }
+            }
+        }
+        nav{
+            position: sticky;
+            top: 0;
+            width: 100%;
+            height: 80px;
+            background-color: $PrussianBlue;
+            z-index: 2;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            #menuButtonDiv{
+                display: none;
+                #openMenBtn{
+                    width: 40px;
+                    // background-color: white;
+                    div{
+                        width: 100%;
+                        height: 10px;
+                        background-color: black;
+                        border-radius: 4px;
+                        transition: all 0.5s;
+                        
+                    }
+                    div:not(:last-Child){
+                        margin-bottom: 2px;
+                    }
+                    
+                }
+                #navMenuSm{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 30%;
+                    height: 350px;
+                    background-color: $PrussianBlue;
+                    // background-color: rgba(0, 0, 0, 0.5);
+                    #closeMenuDiv{
+                        width: 100%;
+                        height: 80px;
+                        background-color: $Orange;
+                        // background-color: rgba(0, 0, 0, 0.7);
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        #closeMenuBtn{
+                            width: 40px;
+                            margin-right: 20px;
+                            div{
+                                width: 100%;
+                                height: 10px;
+                                background-color: black;
+                                border-radius: 4px;
+                                transition: all 0.5s;
+                            }
+                            div:not(:last-Child){
+                                margin-bottom: 2px;
+                            }
+                            
+                        }
+                    }
+                    ul{
+                        list-style: none;
+                        padding: 0px;
+                        height: 270px;
+                        li{
+                            font-size: 20px;
+                            height: 25%;
+                            border-bottom: 2px solid lightgray;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            a{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            #middleNavDiv{
+                ul{
+                    list-style: none;
+                    height: 45px;
+                    margin-bottom: 0px;
+                    display: flex;
+                    li{
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        font-size: 20px;
+                        position: relative;
+                        padding: 5px;
+                        overflow: hidden;
+                        a{
+                            color: white;
+                            text-align: center;
+                            text-decoration: none;
+                            padding: 4px;
+                        }
+                    }
+                      
+                }
+            }
+            #accountSectDiv{
+                ul{
+                    list-style: none;
+                    margin-bottom: 0px;
+                    display: flex;
+                    li{
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        font-size: 20px;
+                        position: relative;
+                        padding: 5px;
+                        overflow: hidden;
+                        a, button{
+                            color: white;
+                            text-decoration: none;
+                            padding: 4px;
+                            outline: none !important;
+                        }
+                    }
+                }
+            }
+            .active::before{
+                content: "";
+                position: absolute;
+                top: 3px;
+                bottom: 3px;
+                left: 3px;
+                right: 3px;
+                background: $PrussianBlue;
+                z-index: -1;
+                border: 3px solid transparent;
+            }
+            .active::after{
+                content: "";
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                background-color: $Orange;
+                z-index: -2;
+            }
+            .asd::before{
+                content: "";
+                position: absolute;
+                top: 3px;
+                bottom: 3px;
+                left: 3px;
+                right: 3px;
+                background: $PrussianBlue;
+                z-index: -1;
+                border: 3px solid transparent;
+            }
+            .asd::after{
+                content: "";
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                background-color: $Orange;
+                transform: rotate(-90deg) translate(-50%, -110%);
+                transform-origin: top left;
+                transition: transform 0.5s;
+                z-index: -2;
+            }
+            .asd:hover:after{
+                transform: rotate(0) translate(0,0);
+            }
+        }
+        #whatAvailableSect{
+            width: 100%;
+            padding: 15px;
+            // height: 40px;
+            background-color: $Orange;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            #chooseLocationDiv{
+                // width: 30%;
+                display: flex;
+                justify-content: space-evenly;
+                #chooseStateDiv{
+                    select{
+                        width: 140px; 
+                        border: 2px solid $PrussianBlue;
+                        border-radius: 10px;
+                        background-color: $LightConflowerBlue;
+                        // color: $Orange;
+                        outline: #8ECAE6;
+                        font-size: 18px;
+                        padding: 7px;
+                        font-weight: 700;  
+                    }
+                }
+                #chooseCinemaDiv{
+                    select{
+                        width: 200px;
+                        border: 2px solid $PrussianBlue;
+                        border-radius: 10px;
+                        background-color: $LightConflowerBlue;
+                        // color: $Orange;
+                        outline: #8ECAE6;
+                        font-size: 18px;
+                        padding: 7px;
+                        font-weight: 700;
+                    }
+                }
+                #chooseDateDiv{
+                    select{
+                        width: 200px;
+                        border: 2px solid $PrussianBlue;
+                        border-radius: 10px;
+                        background-color: $LightConflowerBlue;
+                        // color: $Orange;
+                        outline: #8ECAE6;
+                        font-size: 18px;
+                        padding: 7px;
+                        font-weight: 700;
+                    }
+                }
+                #chooseCategoryDiv{
+                    select{
+                        width: 200px;
+                        border: 2px solid $PrussianBlue;
+                        border-radius: 10px;
+                        background-color: $LightConflowerBlue;
+                        // color: $Orange;
+                        outline: #8ECAE6;
+                        font-size: 18px;
+                        padding: 7px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        #availableMovieInCinemaSect{
+            width: 100%;
+            margin-top: 40px;
+            // background-color: $BlueGreen;
+            #aMovieInfoConRow{
+                // background-color: $LightConflowerBlue;
+                #aMovieInfoConCol1{
+                    background-color: $LightConflowerBlue;
+                }
+                #aMovieInfoConCol2{
+                    background-color: $BlueGreen;
+                }
+                #aMovieInfoConCol1, #aMovieInfoConCol2{
+                    height: 350px;
+                    border-bottom: 3px solid $PrussianBlue;
+                }
+                #mainMovieInfoDiv{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    #image{
+                    width: 30%;
+                    height: 90%;
+                    background-size: cover;
+                    background-position: center;
+                    }
+                    #notes{
+                        width: 68%;
+                        height: 90%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-content: space-between;
+                        
+                        #moviNaDiv{
+                            width: 100%;
+                            h3{
+                                color: white;
+                                font-weight: bold;
+                            }
+                        }
+                        #whatMoviesIsAbout{
+                            font-size: 18px;
+                        }
+                        #showtimesDiv{
+                            .myBtn{
+                                font-size: 20px;
+                                color: white;
+                                background-image: linear-gradient(to bottom right, $LightConflowerBlue, $PrussianBlue);
+                            }
+                            #timeBtn{
+                                font-size: 17px;
+                            }
+                            #showtimesBtn{
+                                font-size: 20px;
+                            }   
+                        }
+                        #timeAndGenreDiv{
+                            height: fit-content;
+                            font-size: 20px;
+                            width: 100%;
+                            display: flex;
+                            justify-content: flex-end;
+                            span{
+                                margin-left: 10%;
+                            }
+                            // background-color: rgb(41, 16, 16);
+                        }
+                    }
+                }
+            }
+        }
+        #footerSect{
+            margin-top: 40px;
+            background-color: $PrussianBlue;
+            #footerRow{
+                padding-top: 40px;
+                margin: 0;
+                height: auto;
+                #companyCol{
+                    h5{
+                        color: white;
+                        text-align: center;
+                    }
+                    p{
+                        color: lightgray;
+                    }
+                    Address{
+                        color: white;
+                    }
+                }
+                #faqsCol{
+                    h5{
+                        color: white;
+                        text-align: center;
+                    }
+                    div{
+                        a{
+                            display: block;
+                        }
+                    }
+                }
+                #contactCol{
+                    // height: 250px;
+                    color: lightgray;
+                    h5{
+                        text-align: center;
+                        text-align: center;
+                    }
+                    #contactUsLinks{
+                        padding-left: 20    px;
+                        font-size: 20px;
+                        a{
+                            display: block;
+                            i{
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+                #paymentCol{
+                    h5{
+                        color: white;
+                        text-align: center;
+                    }
+                    div{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        img{
+                            margin: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    nav{
+        padding-left: 25px;
+        padding-right: 25px;
+        justify-content: space-between !important;
+        #menuButtonDiv{
+            display: block !important;
+            #navMenuSm{
+                display: none;
+            }
+        }
+        #middleNavDiv{
+            display: none;
+        }
+    }
+}
+.to{
+    div:first-child{
+        width: 130% !important;
+        transform: rotateZ(45deg) translateY(115%) translateX(7%);
+    }
+    div:nth-child(2){
+        opacity: 0;
+    }
+    div:last-child{
+        width: 130% !important;
+        transform: rotateZ(-45deg) translateY(-140%) translateX(10%);
+    }
+}

@@ -1,0 +1,209 @@
+$LightConflowerBlue: #8ECAE6;
+$BlueGreen: #219EBC;
+$PrussianBlue: #023047;
+$HoneyYellow: #FFB703;
+$Orange: #FB8500;
+
+body{
+    main{
+        nav{
+            position: sticky;
+            top: 0;
+            width: 100%;
+            height: 80px;
+            background-color: $PrussianBlue;
+            z-index: 2;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            #menuButtonDiv{
+                display: none;
+                #openMenBtn{
+                    width: 40px;
+                    // background-color: white;
+                    div{
+                        width: 100%;
+                        height: 10px;
+                        background-color: black;
+                        border-radius: 4px;
+                        transition: all 0.5s;
+                        
+                    }
+                    div:not(:last-Child){
+                        margin-bottom: 2px;
+                    }
+                    
+                }
+                #navMenuSm{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 30%;
+                    height: 350px;
+                    background-color: $PrussianBlue;
+                    // background-color: rgba(0, 0, 0, 0.5);
+                    #closeMenuDiv{
+                        width: 100%;
+                        height: 80px;
+                        background-color: $Orange;
+                        // background-color: rgba(0, 0, 0, 0.7);
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        #closeMenuBtn{
+                            width: 40px;
+                            margin-right: 20px;
+                            div{
+                                width: 100%;
+                                height: 10px;
+                                background-color: black;
+                                border-radius: 4px;
+                                transition: all 0.5s;
+                            }
+                            div:not(:last-Child){
+                                margin-bottom: 2px;
+                            }
+                            
+                        }
+                    }
+                    ul{
+                        list-style: none;
+                        padding: 0px;
+                        height: 270px;
+                        li{
+                            font-size: 20px;
+                            height: 25%;
+                            border-bottom: 2px solid lightgray;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            a{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            #middleNavDiv{
+                ul{
+                    list-style: none;
+                    height: 45px;
+                    margin-bottom: 0px;
+                    display: flex;
+                    li{
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        font-size: 20px;
+                        position: relative;
+                        padding: 5px;
+                        overflow: hidden;
+                        a{
+                            color: white;
+                            text-align: center;
+                            text-decoration: none;
+                            padding: 4px;
+                        }
+                    }
+                      
+                }
+            }
+            #accountSectDiv{
+                ul{
+                    list-style: none;
+                    margin-bottom: 0px;
+                    display: flex;
+                    li{
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        font-size: 20px;
+                        position: relative;
+                        padding: 5px;
+                        overflow: hidden;
+                        a, button{
+                            color: white;
+                            text-decoration: none;
+                            padding: 4px;
+                            outline: none !important;
+                        }
+                    }
+                }
+            }
+            .active::before{
+                content: "";
+                position: absolute;
+                top: 3px;
+                bottom: 3px;
+                left: 3px;
+                right: 3px;
+                background: $PrussianBlue;
+                z-index: -1;
+                border: 3px solid transparent;
+            }
+            .active::after{
+                content: "";
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                background-color: $Orange;
+                z-index: -2;
+            }
+            .asd::before{
+                content: "";
+                position: absolute;
+                top: 3px;
+                bottom: 3px;
+                left: 3px;
+                right: 3px;
+                background: $PrussianBlue;
+                z-index: -1;
+                border: 3px solid transparent;
+            }
+            .asd::after{
+                content: "";
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                background-color: $Orange;
+                transform: rotate(-90deg) translate(-50%, -110%);
+                transform-origin: top left;
+                transition: transform 0.5s;
+                z-index: -2;
+            }
+            .asd:hover:after{
+                transform: rotate(0) translate(0,0);
+            }
+        }
+        #paymentSect{
+            width: 100%;
+            height: 90vh;
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            #container{
+                width: 80%;
+                height: 70vh;
+                background-color: white;
+                #paymentType{
+                    justify-content: space-evenly;
+                    height: 15vh;
+                    background-color: $LightConflowerBlue;
+                    align-items: center;
+                    .active{
+                        border: 6px solid $Orange;
+                    }
+                }
+                #formContainer{
+                    width: 100%;
+                    height: 50vh;
+                    background-color: lightblue;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,446 @@
+body main .modal_content {
+  background-image: linear-gradient(to bottom right, #FB8500 15%, #8ECAE6 15%) !important;
+  padding: 30px;
+}
+body main .modal_content .modal_header h1 {
+  color: #023047;
+}
+body main .modal_content #signUpBtnDiv {
+  display: flex;
+  justify-content: center;
+}
+body main .modal_content #signUpBtnDiv #signUpBtn {
+  padding: 0;
+  color: #FB8500;
+  font-weight: bold;
+}
+body main .modal_content #userSignIn .success input, body main .modal_content #userSignUp .success input {
+  border-bottom: 2px solid #2ecc71;
+}
+body main .modal_content #userSignIn .error input, body main .modal_content #userSignUp .error input {
+  border-bottom: 2px solid #e74c3c;
+}
+body main .modal_content #userSignIn .success i, body main .modal_content #userSignUp .success i {
+  color: #2ecc71;
+  visibility: visible;
+}
+body main .modal_content #userSignIn .error i, body main .modal_content #userSignUp .error i {
+  color: #e74c3c;
+  visibility: visible;
+}
+body main .modal_content #userSignIn .error small, body main .modal_content #userSignUp .error small {
+  color: #e74c3c;
+  visibility: visible;
+}
+body main .modal_content #userSignIn i, body main .modal_content #userSignUp i {
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  visibility: hidden;
+}
+body main .modal_content #userSignIn small, body main .modal_content #userSignUp small {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+body main .modal_content #userSignIn input, body main .modal_content #userSignUp input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid #023047;
+  outline: none;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+body main .modal_content #userSignIn span, body main .modal_content #userSignUp span {
+  font-size: 18px;
+  position: absolute;
+  transform: translate(0px, 10px);
+}
+body main .modal_content #userSignIn .gg, body main .modal_content #userSignUp .gg {
+  transition: all 0.7s;
+  transform: translate(0px, -10px);
+  font-size: 14px;
+}
+body main .modal_content #userSignIn .gh, body main .modal_content #userSignUp .gh {
+  transition: all 0.7s;
+  transform: translate(0px, 10px);
+  font-size: 18px;
+}
+body main .modal_content #userSignIn div, body main .modal_content #userSignUp div {
+  position: relative;
+}
+body main .modal_content #userSignIn #submitBtnDiv, body main .modal_content #userSignUp #submitBtnDiv {
+  text-align: center;
+}
+body main .modal_content #userSignIn #submitBtnDiv #submitBtn, body main .modal_content #userSignUp #submitBtnDiv #submitBtn {
+  width: 70%;
+  font-size: 27px;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  background-color: #023047;
+}
+body main nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #023047;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body main nav #menuButtonDiv {
+  display: none;
+}
+body main nav #menuButtonDiv #openMenBtn {
+  width: 40px;
+}
+body main nav #menuButtonDiv #openMenBtn div {
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+body main nav #menuButtonDiv #openMenBtn div:not(:last-Child) {
+  margin-bottom: 2px;
+}
+body main nav #menuButtonDiv #navMenuSm {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: 350px;
+  background-color: #023047;
+}
+body main nav #menuButtonDiv #navMenuSm #closeMenuDiv {
+  width: 100%;
+  height: 80px;
+  background-color: #FB8500;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+body main nav #menuButtonDiv #navMenuSm #closeMenuDiv #closeMenuBtn {
+  width: 40px;
+  margin-right: 20px;
+}
+body main nav #menuButtonDiv #navMenuSm #closeMenuDiv #closeMenuBtn div {
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+body main nav #menuButtonDiv #navMenuSm #closeMenuDiv #closeMenuBtn div:not(:last-Child) {
+  margin-bottom: 2px;
+}
+body main nav #menuButtonDiv #navMenuSm ul {
+  list-style: none;
+  padding: 0px;
+  height: 270px;
+}
+body main nav #menuButtonDiv #navMenuSm ul li {
+  font-size: 20px;
+  height: 25%;
+  border-bottom: 2px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main nav #menuButtonDiv #navMenuSm ul li a {
+  color: white;
+}
+body main nav #middleNavDiv ul {
+  list-style: none;
+  height: 45px;
+  margin-bottom: 0px;
+  display: flex;
+}
+body main nav #middleNavDiv ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
+}
+body main nav #middleNavDiv ul li a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 4px;
+}
+body main nav #accountSectDiv ul {
+  list-style: none;
+  margin-bottom: 0px;
+  display: flex;
+}
+body main nav #accountSectDiv ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
+}
+body main nav #accountSectDiv ul li a, body main nav #accountSectDiv ul li button {
+  color: white;
+  text-decoration: none;
+  padding: 4px;
+  outline: none !important;
+}
+body main nav .active::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background: #023047;
+  z-index: -1;
+  border: 3px solid transparent;
+}
+body main nav .active::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #FB8500;
+  z-index: -2;
+}
+body main nav .asd::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background: #023047;
+  z-index: -1;
+  border: 3px solid transparent;
+}
+body main nav .asd::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #FB8500;
+  transform: rotate(-90deg) translate(-50%, -110%);
+  transform-origin: top left;
+  transition: transform 0.5s;
+  z-index: -2;
+}
+body main nav .asd:hover:after {
+  transform: rotate(0) translate(0, 0);
+}
+body main #whatAvailableSect {
+  width: 100%;
+  padding: 15px;
+  background-color: #FB8500;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body main #whatAvailableSect #chooseLocationDiv {
+  display: flex;
+  justify-content: space-evenly;
+}
+body main #whatAvailableSect #chooseLocationDiv #chooseStateDiv select {
+  width: 140px;
+  border: 2px solid #023047;
+  border-radius: 10px;
+  background-color: #8ECAE6;
+  outline: #8ECAE6;
+  font-size: 18px;
+  padding: 7px;
+  font-weight: 700;
+}
+body main #whatAvailableSect #chooseLocationDiv #chooseCinemaDiv select {
+  width: 200px;
+  border: 2px solid #023047;
+  border-radius: 10px;
+  background-color: #8ECAE6;
+  outline: #8ECAE6;
+  font-size: 18px;
+  padding: 7px;
+  font-weight: 700;
+}
+body main #whatAvailableSect #chooseLocationDiv #chooseDateDiv select {
+  width: 200px;
+  border: 2px solid #023047;
+  border-radius: 10px;
+  background-color: #8ECAE6;
+  outline: #8ECAE6;
+  font-size: 18px;
+  padding: 7px;
+  font-weight: 700;
+}
+body main #whatAvailableSect #chooseLocationDiv #chooseCategoryDiv select {
+  width: 200px;
+  border: 2px solid #023047;
+  border-radius: 10px;
+  background-color: #8ECAE6;
+  outline: #8ECAE6;
+  font-size: 18px;
+  padding: 7px;
+  font-weight: 700;
+}
+body main #availableMovieInCinemaSect {
+  width: 100%;
+  margin-top: 40px;
+}
+body main #availableMovieInCinemaSect #aMovieInfoConRow #aMovieInfoConCol1 {
+  background-color: #8ECAE6;
+}
+body main #availableMovieInCinemaSect #aMovieInfoConRow #aMovieInfoConCol2 {
+  background-color: #219EBC;
+}
+body main #availableMovieInCinemaSect #aMovieInfoConRow #aMovieInfoConCol1, body main #availableMovieInCinemaSect #aMovieInfoConRow #aMovieInfoConCol2 {
+  height: 350px;
+  border-bottom: 3px solid #023047;
+}
+body main #availableMovieInCinemaSect #aMovieInfoConRow #mainMovieInfoDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main #availableMovieInCinemaSect #aMovieInfoConRow #mainMovieInfoDiv #image {
+  width: 30%;
+  height: 90%;
+  background-size: cover;
+  background-position: center;
+}
+body main #availableMovieInCinemaSect #aMovieInfoConRow #mainMovieInfoDiv #notes {
+  width: 68%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+body main #availableMovieInCinemaSect #aMovieInfoConRow #mainMovieInfoDiv #notes #moviNaDiv {
+  width: 100%;
+}
+body main #availableMovieInCinemaSect #aMovieInfoConRow #mainMovieInfoDiv #notes #moviNaDiv h3 {
+  color: white;
+  font-weight: bold;
+}
+body main #availableMovieInCinemaSect #aMovieInfoConRow #mainMovieInfoDiv #notes #whatMoviesIsAbout {
+  font-size: 18px;
+}
+body main #availableMovieInCinemaSect #aMovieInfoConRow #mainMovieInfoDiv #notes #showtimesDiv .myBtn {
+  font-size: 20px;
+  color: white;
+  background-image: linear-gradient(to bottom right, #8ECAE6, #023047);
+}
+body main #availableMovieInCinemaSect #aMovieInfoConRow #mainMovieInfoDiv #notes #showtimesDiv #timeBtn {
+  font-size: 17px;
+}
+body main #availableMovieInCinemaSect #aMovieInfoConRow #mainMovieInfoDiv #notes #showtimesDiv #showtimesBtn {
+  font-size: 20px;
+}
+body main #availableMovieInCinemaSect #aMovieInfoConRow #mainMovieInfoDiv #notes #timeAndGenreDiv {
+  height: fit-content;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+body main #availableMovieInCinemaSect #aMovieInfoConRow #mainMovieInfoDiv #notes #timeAndGenreDiv span {
+  margin-left: 10%;
+}
+body main #footerSect {
+  margin-top: 40px;
+  background-color: #023047;
+}
+body main #footerSect #footerRow {
+  padding-top: 40px;
+  margin: 0;
+  height: auto;
+}
+body main #footerSect #footerRow #companyCol h5 {
+  color: white;
+  text-align: center;
+}
+body main #footerSect #footerRow #companyCol p {
+  color: lightgray;
+}
+body main #footerSect #footerRow #companyCol Address {
+  color: white;
+}
+body main #footerSect #footerRow #faqsCol h5 {
+  color: white;
+  text-align: center;
+}
+body main #footerSect #footerRow #faqsCol div a {
+  display: block;
+}
+body main #footerSect #footerRow #contactCol {
+  color: lightgray;
+}
+body main #footerSect #footerRow #contactCol h5 {
+  text-align: center;
+  text-align: center;
+}
+body main #footerSect #footerRow #contactCol #contactUsLinks {
+  padding-left: 20 px;
+  font-size: 20px;
+}
+body main #footerSect #footerRow #contactCol #contactUsLinks a {
+  display: block;
+}
+body main #footerSect #footerRow #contactCol #contactUsLinks a i {
+  margin-right: 10px;
+}
+body main #footerSect #footerRow #paymentCol h5 {
+  color: white;
+  text-align: center;
+}
+body main #footerSect #footerRow #paymentCol div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body main #footerSect #footerRow #paymentCol div img {
+  margin: 5px;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    padding-left: 25px;
+    padding-right: 25px;
+    justify-content: space-between !important;
+  }
+  nav #menuButtonDiv {
+    display: block !important;
+  }
+  nav #menuButtonDiv #navMenuSm {
+    display: none;
+  }
+  nav #middleNavDiv {
+    display: none;
+  }
+}
+.to div:first-child {
+  width: 130% !important;
+  transform: rotateZ(45deg) translateY(115%) translateX(7%);
+}
+.to div:nth-child(2) {
+  opacity: 0;
+}
+.to div:last-child {
+  width: 130% !important;
+  transform: rotateZ(-45deg) translateY(-140%) translateX(10%);
+}
+
+/*# sourceMappingURL=BuyTickets.css.map */

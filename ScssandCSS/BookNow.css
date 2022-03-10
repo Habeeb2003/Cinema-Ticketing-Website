@@ -1,0 +1,495 @@
+.modal_content {
+  padding: 30px;
+  border: 2px solid #FB8500;
+}
+.modal_content .modal_header h1 {
+  color: #023047;
+}
+.modal_content #kk {
+  position: absolute;
+}
+.modal_content #modal_body {
+  display: inline;
+}
+.modal_content .ticketCon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+  background: linear-gradient(to bottom right, #219EBC, #023047);
+}
+.modal_content .ticketCon {
+  display: flex;
+  height: auto;
+  padding: 18px;
+  box-sizing: border-box !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden !important;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.modal_content .ticketCon #primary {
+  width: 70%;
+  height: 180px;
+}
+.modal_content .ticketCon #primary h3 {
+  font-weight: bold;
+  text-align: center;
+}
+.modal_content .ticketCon #primary p {
+  margin: 0;
+  font-size: 18px;
+}
+.modal_content .ticketCon #primary #tic_Infi {
+  display: flex;
+  height: 138px;
+  width: 100%;
+  align-items: flex-end;
+}
+.modal_content .ticketCon #secondary {
+  border-left: 2px dashed black;
+  text-align: center;
+  width: 30%;
+  height: 180px;
+}
+.modal_content .ticketCon #secondary h3 {
+  font-weight: bold;
+}
+.modal_content .ticketCon #secondary i {
+  font-size: 70px;
+}
+
+body main nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #023047;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body main nav #menuButtonDiv {
+  display: none;
+}
+body main nav #menuButtonDiv #openMenBtn {
+  width: 40px;
+}
+body main nav #menuButtonDiv #openMenBtn div {
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+body main nav #menuButtonDiv #openMenBtn div:not(:last-Child) {
+  margin-bottom: 2px;
+}
+body main nav #menuButtonDiv #navMenuSm {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: 350px;
+  background-color: #023047;
+}
+body main nav #menuButtonDiv #navMenuSm #closeMenuDiv {
+  width: 100%;
+  height: 80px;
+  background-color: #FB8500;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+body main nav #menuButtonDiv #navMenuSm #closeMenuDiv #closeMenuBtn {
+  width: 40px;
+  margin-right: 20px;
+}
+body main nav #menuButtonDiv #navMenuSm #closeMenuDiv #closeMenuBtn div {
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+body main nav #menuButtonDiv #navMenuSm #closeMenuDiv #closeMenuBtn div:not(:last-Child) {
+  margin-bottom: 2px;
+}
+body main nav #menuButtonDiv #navMenuSm ul {
+  list-style: none;
+  padding: 0px;
+  height: 270px;
+}
+body main nav #menuButtonDiv #navMenuSm ul li {
+  font-size: 20px;
+  height: 25%;
+  border-bottom: 2px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main nav #menuButtonDiv #navMenuSm ul li a {
+  color: white;
+}
+body main nav #middleNavDiv ul {
+  list-style: none;
+  height: 45px;
+  margin-bottom: 0px;
+  display: flex;
+}
+body main nav #middleNavDiv ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
+}
+body main nav #middleNavDiv ul li a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 4px;
+}
+body main nav #accountSectDiv ul {
+  list-style: none;
+  margin-bottom: 0px;
+  display: flex;
+}
+body main nav #accountSectDiv ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
+}
+body main nav #accountSectDiv ul li a, body main nav #accountSectDiv ul li button {
+  color: white;
+  text-decoration: none;
+  padding: 4px;
+  outline: none !important;
+}
+body main nav .active::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background: #023047;
+  z-index: -1;
+  border: 3px solid transparent;
+}
+body main nav .active::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #FB8500;
+  z-index: -2;
+}
+body main nav .asd::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background: #023047;
+  z-index: -1;
+  border: 3px solid transparent;
+}
+body main nav .asd::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #FB8500;
+  transform: rotate(-90deg) translate(-50%, -110%);
+  transform-origin: top left;
+  transition: transform 0.5s;
+  z-index: -2;
+}
+body main nav .asd:hover:after {
+  transform: rotate(0) translate(0, 0);
+}
+body main #movie_BannerSect #movie_Banner {
+  width: 100%;
+  height: 65vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body main #movie_BannerSect #movie_Banner #movie_BannerOverlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+body main #movie_BannerSect #movie_Banner #movie_BannerOverlay #book_nowDetailsDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+body main #movie_BannerSect #movie_Banner #movie_BannerOverlay #book_nowDetailsDiv #book_nowDetails {
+  padding: 30px;
+  color: white;
+}
+body main #movie_BannerSect #movie_Banner #movie_BannerOverlay #book_nowDetailsDiv #book_nowDetails h5 {
+  font-size: 40px;
+}
+body main #movie_BannerSect #movie_Banner #movie_BannerOverlay #book_nowDetailsDiv #book_nowDetails p {
+  font-size: 20px;
+}
+body main #bookNowSect {
+  width: 100%;
+  height: auto;
+}
+body main #bookNowSect #steps_tobookNow #stepsHeading {
+  text-align: center;
+  background-color: #FB8500;
+  color: white;
+}
+body main #bookNowSect #steps_tobookNow #step1info, body main #bookNowSect #steps_tobookNow #step2info, body main #bookNowSect #steps_tobookNow #step3info {
+  background-color: #8ECAE6;
+  padding-top: 20px;
+}
+body main #bookNowSect #steps_tobookNow #step1info h5, body main #bookNowSect #steps_tobookNow #step2info h5, body main #bookNowSect #steps_tobookNow #step3info h5 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+body main #bookNowSect #steps_tobookNow #step1info p, body main #bookNowSect #steps_tobookNow #step2info p, body main #bookNowSect #steps_tobookNow #step3info p {
+  font-weight: 400;
+  font-size: 18px;
+}
+body main #bookNowSect #stepOne {
+  width: 100%;
+}
+body main #bookNowSect #stepOne #step_head {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  background-color: #FFB703;
+}
+body main #bookNowSect #stepOne #step_head h5 {
+  font-size: 22px;
+}
+body main #bookNowSect #stepOne #ticketCon {
+  padding: 20px;
+}
+body main #bookNowSect #stepOne #ticketCon #tpp {
+  background-color: #219EBC;
+  line-height: 2;
+  font-size: 20px !important;
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+body main #bookNowSect #stepOne #ticketCon #a_ticketRow {
+  border-bottom: 2px solid #023047;
+  font-weight: 500;
+}
+body main #bookNowSect #stepOne #ticketCon #a_ticketRow #tic_quanCon {
+  display: flex;
+  justify-content: space-evenly;
+}
+body main #bookNowSect #stepOne #ticketCon #a_ticketRow #tic_quanCon #lBtnDiv, body main #bookNowSect #stepOne #ticketCon #a_ticketRow #tic_quanCon #rBtnDiv {
+  display: flex;
+  align-items: center;
+}
+body main #bookNowSect #stepOne #ticketCon #a_ticketRow #tic_quanCon #left_Btn, body main #bookNowSect #stepOne #ticketCon #a_ticketRow #tic_quanCon #right_Btn {
+  width: 30px;
+  font-size: 20px;
+  background-color: yellow;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+body main #bookNowSect #stepOne #ticketCon #a_ticketRow #tic_quanCon #tic_quan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main #bookNowSect #stepOne #ticketCon #a_ticketRow #tic_quanCon #tic_quan p {
+  width: 40px;
+  margin: 0;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main #bookNowSect #stepOne #ticketCon #fpp #seatsInfoDiv {
+  background-color: #023047;
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 20px;
+}
+body main #bookNowSect #pickSectCon {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+body main #bookNowSect #pickSectCon #availColor, body main #bookNowSect #pickSectCon #unavailColor, body main #bookNowSect #pickSectCon #yaSeat {
+  min-width: 20px !important;
+  min-height: 10px !important;
+  border: 1px solid black;
+}
+body main #bookNowSect #pickSectCon #availColor {
+  background-color: #219EBC;
+}
+body main #bookNowSect #pickSectCon #unavailColor {
+  background-color: #8ECAE6;
+}
+body main #bookNowSect #pickSectCon #yaSeat {
+  background-color: #023047;
+}
+body main #bookNowSect #pickSectCon #seatDiv {
+  width: 100%;
+  color: #023047;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body main #bookNowSect #pickSectCon #seatDiv #seatNo {
+  outline: none;
+  border: 2px solid #FB8500;
+  width: 40px;
+  height: 40px;
+  background-color: #219EBC;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+body main #bookNowSect #pickSectCon #seatDiv #seatNo:disabled {
+  background-color: #8ECAE6;
+}
+body main #bookNowSect #pickSectCon #seatsInfoDiv {
+  background-color: #023047;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+body main #nextSect {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #FB8500;
+}
+body main #nextSect #nextConDiv {
+  width: 100%;
+}
+body main #nextSect #nextConDiv #nextCon {
+  width: 100%;
+  text-align: center;
+}
+body main #nextSect #nextConDiv #nextCon button {
+  width: 150px;
+  background-color: #023047;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+body main #footerSect {
+  margin-top: 40px;
+  background-color: #023047;
+}
+body main #footerSect #footerRow {
+  padding-top: 40px;
+  margin: 0;
+  height: auto;
+}
+body main #footerSect #footerRow #companyCol h5 {
+  color: white;
+  text-align: center;
+}
+body main #footerSect #footerRow #companyCol p {
+  color: lightgray;
+}
+body main #footerSect #footerRow #companyCol Address {
+  color: white;
+}
+body main #footerSect #footerRow #faqsCol h5 {
+  color: white;
+  text-align: center;
+}
+body main #footerSect #footerRow #faqsCol div a {
+  display: block;
+}
+body main #footerSect #footerRow #contactCol {
+  color: lightgray;
+}
+body main #footerSect #footerRow #contactCol h5 {
+  text-align: center;
+  text-align: center;
+}
+body main #footerSect #footerRow #contactCol #contactUsLinks {
+  padding-left: 20 px;
+  font-size: 20px;
+}
+body main #footerSect #footerRow #contactCol #contactUsLinks a {
+  display: block;
+}
+body main #footerSect #footerRow #contactCol #contactUsLinks a i {
+  margin-right: 10px;
+}
+body main #footerSect #footerRow #paymentCol h5 {
+  color: white;
+  text-align: center;
+}
+body main #footerSect #footerRow #paymentCol div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body main #footerSect #footerRow #paymentCol div img {
+  margin: 5px;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    padding-left: 25px;
+    padding-right: 25px;
+    justify-content: space-between !important;
+  }
+  nav #menuButtonDiv {
+    display: block !important;
+  }
+  nav #menuButtonDiv #navMenuSm {
+    display: none;
+  }
+  nav #middleNavDiv {
+    display: none;
+  }
+}
+.to div:first-child {
+  width: 130% !important;
+  transform: rotateZ(45deg) translateY(115%) translateX(7%);
+}
+.to div:nth-child(2) {
+  opacity: 0;
+}
+.to div:last-child {
+  width: 130% !important;
+  transform: rotateZ(-45deg) translateY(-140%) translateX(10%);
+}
+
+/*# sourceMappingURL=BookNow.css.map */

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNow</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../ScssandCSS/BookNow.css">
+</head>
+<style>
+    @media screen {
+        #printSection{
+            display: none;
+        }
+    }
+    @media print{
+        body * {
+            visibility: hidden;
+        }
+        #printSection, #printSection * {
+            visibility: visible;
+        }
+        #printSection{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .modal-footer,#btnClose, #btnPrint, #modal_title{
+            display: none;
+        }
+        .modal_content{
+            padding: 0;
+            border: none;
+        }
+    }
+</style>
+<body>
+    <main>
+        <div id="printThis">
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content modal_content">
+                        <div class="modal-header modal_header">
+                            <h1 class="modal-title text-center" id="modal_title">Print Ticket</h1>
+                            <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                        </div>
+                        <div class="modal-body" id="modal_body">
+                            <!-- <div class="ticketCon" style="background-image: url('../Images/8-88499_movie-roll-clip-art.png'); background-position: center; background-repeat: no-repeat; background-size: contain;">
+                                <div id="primary">
+                                    <div>
+                                        <h3>CINEMA TICKET</h3>
+                                    </div>
+                                    <div id="tic_Infi" class="pb-2">
+                                        <div>
+                                            <p><b>Date:</b>05/08/2018</p>
+                                            <p><b>Time:</b>9:00PM</p>
+                                            <p><b>Seat No:</b>12</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="secondary">
+                                    <div>
+                                        <h3>ADMIT ONE</h3>
+                                    </div>
+                                    <div>
+                                        <h6>Movie Ticket</h6>
+                                    </div>
+                                    <div id="barcodeDiv">
+                                        <i class="fa fa-barcode"></i>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div> -->
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" id="btnClose" data-dismiss="modal">Close</button>
+                            <button type="button" id="btnPrint" class="btn btn-primary">Print</button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div id="menuButtonDiv">
+                <div id="openMenBtn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div id="navMenuSm">
+                    <div id="closeMenuDiv">
+                        <div id="closeMenuBtn">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <ul id="menuUlSm">
+                    
+                    </ul>
+                </div>
+            </div>
+            <div id="logoDiv">
+                <div>
+                    <img src="../Images/masterCard-log.png" style="width: 100px;" alt="">
+                </div>
+            </div>
+            <div id="middleNavDiv">
+                <ul id="navUl">
+                    <li class="asd">
+                        <a href="Index.html">
+                            <i class="fa fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="asd">
+                        <a href="BuyTickets.html">
+                            <span>Buy Tickets</span>
+                        </a>
+                    </li>
+                    <li class="asd">
+                        <a href="#footerSect">
+                            <span>Contact Us</span>
+                        </a>
+                    </li>
+                    <li class="asd">
+                        <a href="#footerSect">
+                            <span>About Us</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div id="accountSectDiv">
+                <ul>
+                    <li class="asd">
+                        <button type="button" id="myModalBtn" class="btn p-2 fa fa-user">Sign In</button>  
+                    </li>
+                </ul>
+            </div> -->
+        </nav>
+        <section id="movie_BannerSect">
+            <div id="movie_Banner" >
+                <div id="movie_BannerOverlay">
+                    <div id="book_nowDetailsDiv">
+                        <div id="book_nowDetails">
+                            <h5 id="mov_Name"></h5>
+                            <p id="cini_location"></p>
+                            <p id="mov_Date"></p>
+                            <p id="selected_Showtime"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="bookNowSect">
+            <div id="steps_tobookNow">
+                <div id="stepsHeading">
+                    <h4 class="m-0 p-3">STEPS</h4>
+                </div>
+                <div id="steps" class="row m-0">
+                    <div id="step1info" class="col-4">
+                        <h5>Step 1</h5>
+                        <p>Select at least one Ticket and maximum of 5 Tickets</p>
+                    </div>
+                    <div id="step2info" class="col-4">
+                        <h5>Step 2</h5>
+                        <p>Select seats</p>
+                    </div>
+                    <div id="step3info" class="col-4">
+                        <h5>Step 3</h5>
+                        <p>Print Ticket</p>
+                    </div>
+                </div>
+            </div>
+            <div id="stepOne">
+                <div id="step_head">
+                    <h5 id="stppp">STEP 1</h5>
+                </div>
+                <div id="ticketCon">
+                    <div id="select_ticket" class="row m-0">
+                        <div id="tpp" class="col-6 ">
+                            <div class="d-flex justify-content-between">
+                                <div id="tic_type" class="">
+                                    <h5>Ticket Type</h5>
+                                </div>
+                                <div id="tic_price" class="">
+                                    <h5>Price</h5>
+                                </div>
+                                <div id="noOf_P" class="text-center">
+                                    <h5>No of guest</h5>
+                                </div>
+                            </div>
+                            <div id="a_ticketRow" class="d-flex justify-content-between">
+                                <div class="">
+                                    <p>Standard ticket</p>
+                                </div>
+                                <div id="pr" class="">
+                                    <span class="naira">N</span>
+                                    <span id="pr_pr">2500</span>
+                                </div>
+                                <div id="oRallTicQanCon" class="">
+                                    <div id="tic_quanCon">
+                                        <div id="lBtnDiv">
+                                            <button id="left_Btn" disabled class="_BTNM btn fa fa-minus text-center p-1" onclick=""></button>
+                                        </div>
+                                        <div id="tic_quan">
+                                            <p class="guest">0</p>
+                                        </div>
+                                        <div id="rBtnDiv">
+                                            <button id="right_Btn" class="_BTNP btn fa fa-plus text-center p-1"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>     
+                        </div>
+                        <div id="fpp" class="col-6">
+                            <div id="seatsInfoDiv" class="">
+                                <div id="totalDi">
+                                    <div>
+                                        <h5 class="d-inline">No of Guest:</h5>
+                                        <b id="total_guest">0</b>
+                                    </div>
+                                    <div>
+                                        <h5 class="d-inline">Total Amount:</h5>
+                                        <b id="overTotalAmount">0</b>
+                                    </div>
+                                    <div>
+                                        <h5 class="d-inline">Your seat(s):</h5>
+                                        <b  id="yourSeatNo"></b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+        </section>
+        <div class="text-center" id="formError" style="display: none;">
+            <p style="color: red;">Select at least one ticket</p>
+        </div>
+        <section id="nextSect">
+            <div id="nextConDiv">
+                <div id="nextCon">
+                    <button id="nextStep" class="btn" >Next</button>
+                </div>
+
+            </div>
+        </section>
+        <section id="footerSect">
+            <div class="row" id="footerRow">
+                <div class="col pl-5" id="companyCol">
+                    <h5>Company's Info</h5>
+                    <p>A viable company trusted my organization</p>
+                    <Address>
+                        Address: BOX 235, Ibadan, Oyo State, Nigeria <br>   
+                        Email: tawaliuwilliams@gmail.com
+                    </Address>
+                    <p></p>
+                </div>
+                <div class="col-sm" id="faqsCol">
+                    <h5>FAQS</h5>
+                    <div>
+                        <a href="#">Faqs</a>
+                        <a href="#">Give us feedback</a>
+                    </div>
+                </div>
+                <div class="col-sm" id="contactCol">
+                    <h5>Contact Us</h5>
+                    <div id="contactUsLinks">
+                        <a href="#"><i class="fa fa-facebook-square"></i>Facebook</a>
+                        <a href="#"><i class="fa fa-whatsapp"></i>Whatsapp</a>
+                        <a href="#"><i class="fa fa-instagram"></i>Instagram</a>
+                        <a href="#"><i class="fa fa-twitter-square"></i>Twitter</a>
+                    </div>
+                </div>
+                <div class="col-lg" id="paymentCol">
+                    <h5>Payment Method</h5>
+                    <div>
+                        <img src="../Images/payPal-logo.png" style="width: 100px;" alt="">
+                        <img src="../Images/masterCard-log.png" style="width: 100px;" alt="">
+                        <img src="../Images/visa-logo.jpg"  style="width: 100px;" alt="">
+                        <img src="../Images/payPal-logo.png" style="width: 100px;" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+<script src="../javaScript/navbar.js"></script>
+<script src="../javaScript/AvailableMovieInSelectedCinema.js"></script>
+<script src="../javaScript//BookNow.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

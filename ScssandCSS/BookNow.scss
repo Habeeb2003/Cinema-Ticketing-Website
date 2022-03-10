@@ -1,0 +1,558 @@
+$LightConflowerBlue: #8ECAE6;
+$BlueGreen: #219EBC;
+$PrussianBlue: #023047;
+$HoneyYellow: #FFB703;
+$Orange: #FB8500;
+.modal_content{
+    padding: 30px;
+    border: 2px solid #FB8500;
+    .modal_header{
+        h1{
+            color: $PrussianBlue;
+        }
+        
+    }
+    #kk{
+        position: absolute;
+
+    }
+    #modal_body{
+        display: inline;
+    }
+    .ticketCon::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background: linear-gradient(to bottom right, $BlueGreen, $PrussianBlue  );
+    }
+    .ticketCon{
+        display: flex;
+        height: auto;
+        padding: 18px;
+        box-sizing: border-box !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden !important;
+        position: relative;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        #primary{
+            width: 70%;
+            height: 180px;
+            h3{
+                font-weight: bold;
+                text-align: center;
+            }
+            p{
+                margin: 0;
+                font-size: 18px;
+            }
+            #tic_Infi{
+                display: flex;
+                height: 138px;
+                width: 100%;
+                align-items: flex-end;
+            }
+        }
+        #secondary{
+            border-left: 2px dashed black;
+            text-align: center;
+            width: 30%;
+            height: 180px;
+            h3{
+                font-weight: bold;
+            }
+            i{
+                font-size: 70px;
+            }
+        }
+    }
+}
+body{
+    main{
+        
+        nav{
+            position: sticky;
+            top: 0;
+            width: 100%;
+            height: 80px;
+            background-color: $PrussianBlue;
+            z-index: 2;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            #menuButtonDiv{
+                display: none;
+                #openMenBtn{
+                    width: 40px;
+                    // background-color: white;
+                    div{
+                        width: 100%;
+                        height: 10px;
+                        background-color: black;
+                        border-radius: 4px;
+                        transition: all 0.5s;
+                        
+                    }
+                    div:not(:last-Child){
+                        margin-bottom: 2px;
+                    }
+                    
+                }
+                #navMenuSm{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 30%;
+                    height: 350px;
+                    background-color: $PrussianBlue;
+                    // background-color: rgba(0, 0, 0, 0.5);
+                    #closeMenuDiv{
+                        width: 100%;
+                        height: 80px;
+                        background-color: $Orange;
+                        // background-color: rgba(0, 0, 0, 0.7);
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        #closeMenuBtn{
+                            width: 40px;
+                            margin-right: 20px;
+                            div{
+                                width: 100%;
+                                height: 10px;
+                                background-color: black;
+                                border-radius: 4px;
+                                transition: all 0.5s;
+                            }
+                            div:not(:last-Child){
+                                margin-bottom: 2px;
+                            }
+                            
+                        }
+                    }
+                    ul{
+                        list-style: none;
+                        padding: 0px;
+                        height: 270px;
+                        li{
+                            font-size: 20px;
+                            height: 25%;
+                            border-bottom: 2px solid lightgray;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            a{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            #middleNavDiv{
+                ul{
+                    list-style: none;
+                    height: 45px;
+                    margin-bottom: 0px;
+                    display: flex;
+                    li{
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        font-size: 20px;
+                        position: relative;
+                        padding: 5px;
+                        overflow: hidden;
+                        a{
+                            color: white;
+                            text-align: center;
+                            text-decoration: none;
+                            padding: 4px;
+                        }
+                    }
+                      
+                }
+            }
+            #accountSectDiv{
+                ul{
+                    list-style: none;
+                    margin-bottom: 0px;
+                    display: flex;
+                    li{
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        font-size: 20px;
+                        position: relative;
+                        padding: 5px;
+                        overflow: hidden;
+                        a, button{
+                            color: white;
+                            text-decoration: none;
+                            padding: 4px;
+                            outline: none !important;
+                        }
+                    }
+                }
+            }
+            .active::before{
+                content: "";
+                position: absolute;
+                top: 3px;
+                bottom: 3px;
+                left: 3px;
+                right: 3px;
+                background: $PrussianBlue;
+                z-index: -1;
+                border: 3px solid transparent;
+            }
+            .active::after{
+                content: "";
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                background-color: $Orange;
+                z-index: -2;
+            }
+            .asd::before{
+                content: "";
+                position: absolute;
+                top: 3px;
+                bottom: 3px;
+                left: 3px;
+                right: 3px;
+                background: $PrussianBlue;
+                z-index: -1;
+                border: 3px solid transparent;
+            }
+            .asd::after{
+                content: "";
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                background-color: $Orange;
+                transform: rotate(-90deg) translate(-50%, -110%);
+                transform-origin: top left;
+                transition: transform 0.5s;
+                z-index: -2;
+            }
+            .asd:hover:after{
+                transform: rotate(0) translate(0,0);
+            }
+        }
+        #movie_BannerSect{
+            #movie_Banner{
+                width: 100%;
+                height: 65vh;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                #movie_BannerOverlay{
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    #book_nowDetailsDiv{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        #book_nowDetails{
+                            padding: 30px;
+                            color: white;
+                            h5{
+                                font-size: 40px;
+                            }
+                            p{
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #bookNowSect{
+            width: 100%;
+            height: auto;
+            // background-color: $BlueGreen;     
+            #steps_tobookNow{
+                #stepsHeading{
+                    text-align: center;
+                    background-color: $Orange;
+                    color: white;
+                }
+                #step1info, #step2info, #step3info{
+                    background-color: $LightConflowerBlue;
+                    padding-top: 20px;
+                    h5{
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                    p{
+                        font-weight: 400;
+                        font-size: 18px;
+                    }
+                }
+            }
+            #stepOne{
+                width: 100%;
+                #step_head{
+                    width: 100%;
+                    text-align: center;
+                    padding: 15px;
+                    background-color: $HoneyYellow;
+                    h5{
+                        font-size: 22px;
+                    }
+                }
+                #ticketCon{
+                    padding: 20px;
+                    // background-color: $BlueGreen;
+                    #tpp{
+                        background-color: $BlueGreen;
+                        line-height: 2;
+                        font-size: 20px !important;
+                        border-radius: 20px;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                    }
+                    #a_ticketRow{
+                        border-bottom: 2px solid $PrussianBlue;
+                        font-weight: 500;
+                        // line-height: 2;
+                        // font-size: 20px;
+                        #tic_quanCon{
+                            display: flex;
+                            justify-content: space-evenly;
+                            #lBtnDiv, #rBtnDiv{
+                                display: flex;
+                                align-items: center;
+                            }
+                            #left_Btn, #right_Btn{
+                                width: 30px;
+                                font-size: 20px;
+                                background-color: yellow;
+                                border: 1px solid black;
+                                border-radius: 15px;
+                            }
+                            #tic_quan{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                p{
+                                    width: 40px;
+                                    margin: 0;
+                                    font-size: 25px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                        
+                    }
+                    #fpp{
+                        #seatsInfoDiv{
+                            background-color: $PrussianBlue;
+                            height: 200px;
+                            border-radius: 20px;
+                            display: flex;
+                            // justify-content: center;
+                            align-items: center;
+                            color: white;
+                            padding: 20px;
+                        }
+                    }
+                }
+                
+                
+            }
+            #pickSectCon{
+                width: 100%;
+                // height: 300px;
+                // background-color: $LightConflowerBlue;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                #availColor, #unavailColor, #yaSeat{
+                    min-width: 20px !important;
+                    min-height: 10px !important;
+                    border: 1px solid black;
+                    // margin: 0;
+                } 
+                #availColor{
+                    background-color: $BlueGreen;
+                }
+                #unavailColor{
+                    background-color: $LightConflowerBlue;
+                }
+                #yaSeat{
+                    background-color: $PrussianBlue;
+                }
+                #seatDiv{
+                    
+                    // background-color: rgb(2, 48, 71);
+                    width: 100%;
+                    // background-color: $LightConflowerBlue;
+                    color: $PrussianBlue;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    #seatNo{
+                        outline: none;
+                        // background-color: $PrussianBlue;
+                        border: 2px solid $Orange;
+                        width: 40px;
+                        height: 40px;
+                        // color: white;
+                        background-color: $BlueGreen;
+                        border-radius: 20px;
+                        padding: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 5px;
+                    }
+                    #seatNo:disabled{
+                        background-color: $LightConflowerBlue;
+                    }
+                
+                }
+                #seatsInfoDiv{
+                    background-color: $PrussianBlue;
+                    display: flex;
+                        // justify-content: center;
+                        align-items: center;
+                        color: white;
+                    #totalDi{
+                        
+                        div{
+                            // width: 40%;
+                        }
+                    }
+                }
+            }
+        }
+        #nextSect{
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background-color: $Orange;
+            #nextConDiv{
+                width: 100%;
+                #nextCon{
+                    width: 100%;
+                    text-align: center;
+                    button{
+                        width: 150px;
+                        background-color: $PrussianBlue;
+                        color: white;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        #footerSect{
+            margin-top: 40px;
+            background-color: $PrussianBlue;
+            #footerRow{
+                padding-top: 40px;
+                margin: 0;
+                height: auto;
+                #companyCol{
+                    h5{
+                        color: white;
+                        text-align: center;
+                    }
+                    p{
+                        color: lightgray;
+                    }
+                    Address{
+                        color: white;
+                    }
+                }
+                #faqsCol{
+                    h5{
+                        color: white;
+                        text-align: center;
+                    }
+                    div{
+                        a{
+                            display: block;
+                        }
+                    }
+                }
+                #contactCol{
+                    // height: 250px;
+                    color: lightgray;
+                    h5{
+                        text-align: center;
+                        text-align: center;
+                    }
+                    #contactUsLinks{
+                        padding-left: 20    px;
+                        font-size: 20px;
+                        a{
+                            display: block;
+                            i{
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+                #paymentCol{
+                    h5{
+                        color: white;
+                        text-align: center;
+                    }
+                    div{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        img{
+                            margin: 5px;
+                        }
+                    }
+                }
+            }
+        }    
+    }
+}
+@media (max-width: 1024px) {
+    nav{
+        padding-left: 25px;
+        padding-right: 25px;
+        justify-content: space-between !important;
+        #menuButtonDiv{
+            display: block !important;
+            #navMenuSm{
+                display: none;
+            }
+        }
+        #middleNavDiv{
+            display: none;
+        }
+    }
+}
+.to{
+    div:first-child{
+        width: 130% !important;
+        transform: rotateZ(45deg) translateY(115%) translateX(7%);
+    }
+    div:nth-child(2){
+        opacity: 0;
+    }
+    div:last-child{
+        width: 130% !important;
+        transform: rotateZ(-45deg) translateY(-140%) translateX(10%);
+    }
+}

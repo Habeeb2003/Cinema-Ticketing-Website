@@ -1,0 +1,93 @@
+.modal_content {
+  padding: 30px;
+  border: 2px solid #FB8500;
+}
+.modal_content .modal_header h1 {
+  color: #023047;
+}
+.modal_content #kk {
+  position: absolute;
+}
+.modal_content #modal_body {
+  display: inline;
+}
+.modal_content #ticketCon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+  background: linear-gradient(to bottom right, #219EBC, #023047);
+}
+.modal_content #ticketCon {
+  display: flex;
+  height: auto;
+  padding: 18px;
+  box-sizing: border-box !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden !important;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.modal_content #ticketCon #primary {
+  width: 70%;
+  height: 180px;
+}
+.modal_content #ticketCon #primary h3 {
+  font-weight: bold;
+  text-align: center;
+}
+.modal_content #ticketCon #primary p {
+  margin: 0;
+  font-size: 18px;
+}
+.modal_content #ticketCon #primary #tic_Infi {
+  display: flex;
+  height: 138px;
+  width: 100%;
+  align-items: flex-end;
+}
+.modal_content #ticketCon #secondary {
+  border-left: 2px dashed black;
+  text-align: center;
+  width: 30%;
+  height: 180px;
+}
+.modal_content #ticketCon #secondary h3 {
+  font-weight: bold;
+}
+.modal_content #ticketCon #secondary i {
+  font-size: 70px;
+}
+
+#contain {
+  width: 500px;
+  height: 300px;
+  background-color: #219EBC;
+}
+#contain #seatDiv {
+  width: 100%;
+  background-color: #FFB703;
+  color: #023047;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#contain #seatDiv #seatNo {
+  width: 10%;
+  background-color: #8ECAE6;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+/*# sourceMappingURL=navbarTest.css.map */

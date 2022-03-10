@@ -1,0 +1,22 @@
+body main nav {
+  width: 15vw;
+  height: 100vh;
+  background-color: transparent;
+  background-color: #023047;
+  position: fixed;
+}
+body main #dash {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+body main #dash #dash2 {
+  width: 20vw;
+  height: 100vh;
+  background-color: #219EBC;
+}
+body main #dash #main {
+  width: 80vw;
+}
+
+/*# sourceMappingURL=Admin.css.map */

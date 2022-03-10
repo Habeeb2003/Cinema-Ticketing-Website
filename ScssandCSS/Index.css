@@ -1,0 +1,620 @@
+body {
+  height: 1500px;
+}
+body .modal_content {
+  background-image: linear-gradient(to bottom right, #FB8500 15%, #8ECAE6 15%) !important;
+  padding: 30px;
+}
+body .modal_content .modal_header h1 {
+  color: #023047;
+}
+body .modal_content #signUpBtnDiv {
+  display: flex;
+  justify-content: center;
+}
+body .modal_content #signUpBtnDiv #signUpBtn {
+  padding: 0;
+  color: #FB8500;
+  font-weight: bold;
+}
+body .modal_content #userSignIn .success input, body .modal_content #userSignUp .success input {
+  border-bottom: 2px solid #2ecc71;
+}
+body .modal_content #userSignIn .error input, body .modal_content #userSignUp .error input {
+  border-bottom: 2px solid #e74c3c;
+}
+body .modal_content #userSignIn .success i, body .modal_content #userSignUp .success i {
+  color: #2ecc71;
+  visibility: visible;
+}
+body .modal_content #userSignIn .error i, body .modal_content #userSignUp .error i {
+  color: #e74c3c;
+  visibility: visible;
+}
+body .modal_content #userSignIn .error small, body .modal_content #userSignUp .error small {
+  color: #e74c3c;
+  visibility: visible;
+}
+body .modal_content #userSignIn i, body .modal_content #userSignUp i {
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  visibility: hidden;
+}
+body .modal_content #userSignIn small, body .modal_content #userSignUp small {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+body .modal_content #userSignIn input, body .modal_content #userSignUp input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid #023047;
+  outline: none;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+body .modal_content #userSignIn span, body .modal_content #userSignUp span {
+  font-size: 18px;
+  position: absolute;
+  transform: translate(0px, 10px);
+}
+body .modal_content #userSignIn .gg, body .modal_content #userSignUp .gg {
+  transition: all 0.7s;
+  transform: translate(0px, -10px);
+  font-size: 14px;
+}
+body .modal_content #userSignIn .gh, body .modal_content #userSignUp .gh {
+  transition: all 0.7s;
+  transform: translate(0px, 10px);
+  font-size: 18px;
+}
+body .modal_content #userSignIn div, body .modal_content #userSignUp div {
+  position: relative;
+}
+body .modal_content #userSignIn #submitBtnDiv, body .modal_content #userSignUp #submitBtnDiv {
+  text-align: center;
+}
+body .modal_content #userSignIn #submitBtnDiv #submitBtn, body .modal_content #userSignUp #submitBtnDiv #submitBtn {
+  width: 70%;
+  font-size: 27px;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  background-color: #023047;
+}
+body nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #023047;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body nav #menuButtonDiv {
+  display: none;
+}
+body nav #menuButtonDiv #openMenBtn {
+  width: 40px;
+}
+body nav #menuButtonDiv #openMenBtn div {
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+body nav #menuButtonDiv #openMenBtn div:not(:last-Child) {
+  margin-bottom: 2px;
+}
+body nav #menuButtonDiv #navMenuSm {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: 350px;
+  background-color: #023047;
+}
+body nav #menuButtonDiv #navMenuSm #closeMenuDiv {
+  width: 100%;
+  height: 80px;
+  background-color: #FB8500;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+body nav #menuButtonDiv #navMenuSm #closeMenuDiv #closeMenuBtn {
+  width: 40px;
+  margin-right: 20px;
+}
+body nav #menuButtonDiv #navMenuSm #closeMenuDiv #closeMenuBtn div {
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+body nav #menuButtonDiv #navMenuSm #closeMenuDiv #closeMenuBtn div:not(:last-Child) {
+  margin-bottom: 2px;
+}
+body nav #menuButtonDiv #navMenuSm ul {
+  list-style: none;
+  padding: 0px;
+  height: 270px;
+}
+body nav #menuButtonDiv #navMenuSm ul li {
+  font-size: 20px;
+  height: 25%;
+  border-bottom: 2px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body nav #menuButtonDiv #navMenuSm ul li a {
+  color: white;
+}
+body nav #middleNavDiv ul {
+  list-style: none;
+  height: 45px;
+  margin-bottom: 0px;
+  display: flex;
+}
+body nav #middleNavDiv ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
+}
+body nav #middleNavDiv ul li a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 4px;
+}
+body nav #accountSectDiv ul {
+  list-style: none;
+  margin-bottom: 0px;
+  display: flex;
+}
+body nav #accountSectDiv ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
+}
+body nav #accountSectDiv ul li a, body nav #accountSectDiv ul li button {
+  color: white;
+  text-decoration: none;
+  padding: 4px;
+  outline: none !important;
+}
+body nav .active::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background: #023047;
+  z-index: -1;
+  border: 3px solid transparent;
+}
+body nav .active::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #FB8500;
+  z-index: -2;
+}
+body nav .asd::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background: #023047;
+  z-index: -1;
+  border: 3px solid transparent;
+}
+body nav .asd::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #FB8500;
+  transform: rotate(-90deg) translate(-50%, -110%);
+  transform-origin: top left;
+  transition: transform 0.5s;
+  z-index: -2;
+}
+body nav .asd:hover:after {
+  transform: rotate(0) translate(0, 0);
+}
+body #latestMovieCorouselSect {
+  width: 100%;
+  height: 80vh;
+  background-color: #219EBC;
+}
+body #latestMovieCorouselSect #imageViewer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+body #latestMovieCorouselSect #imageViewer #iLeft, body #latestMovieCorouselSect #imageViewer #iRight {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 9%;
+  height: 80vh;
+  z-index: 0;
+}
+body #latestMovieCorouselSect #imageViewer #iLeft button, body #latestMovieCorouselSect #imageViewer #iRight button {
+  color: white;
+  font-size: 40px;
+}
+body #latestMovieCorouselSect #imageViewer #iLeft {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.3), black);
+}
+body #latestMovieCorouselSect #imageViewer #iRight {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), black);
+  right: 0;
+}
+body #latestMovieCorouselSect #imageViewer #carouselCon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+body #latestMovieCorouselSect #imageViewer #carouselCon #aDescriptiveCon {
+  min-width: 100vw !important;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+body #latestMovieCorouselSect #imageViewer #carouselCon #aDescriptiveCon #details {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+body #latestMovieCorouselSect #imageViewer #carouselCon #aDescriptiveCon #details #movieTitle h1 {
+  color: white;
+}
+body #latestMovieCorouselSect #imageViewer #carouselCon #aDescriptiveCon #details #movieDecription p {
+  color: white;
+}
+body #latestMovieCorouselSect #imageViewer #carouselCon #aDescriptiveCon #details #viewDetailsBtniv button {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #FB8500;
+  color: #FB8500;
+  background-color: transparent;
+  background-image: linear-gradient(to right, #FFB703 50%, transparent 50%);
+  background-position: 100% 0%;
+  background-size: 200% 100%;
+  transition: 0.5s;
+}
+body #latestMovieCorouselSect #imageViewer #carouselCon #aDescriptiveCon #details #viewDetailsBtniv button:hover {
+  color: white;
+  background-position: 0% 50%;
+}
+body #nowShowingInCinemaSect {
+  margin-top: 30px;
+  width: 100%;
+  height: 390px;
+  background-color: #8ECAE6;
+}
+body #nowShowingInCinemaSect #subHeading {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+body #nowShowingInCinemaSect #subHeading h4 {
+  font-weight: bolder;
+}
+body #nowShowingInCinemaSect #subHeading a {
+  margin-left: 10px;
+  font-weight: bold;
+}
+body #nowShowingInCinemaSect #straightCon {
+  width: 100%;
+  height: 85%;
+  display: flex;
+}
+body #nowShowingInCinemaSect #straightCon #nLeft, body #nowShowingInCinemaSect #straightCon #nRight {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 9%;
+  height: 330px;
+  z-index: 0;
+}
+body #nowShowingInCinemaSect #straightCon #nLeft button, body #nowShowingInCinemaSect #straightCon #nRight button {
+  color: white;
+  font-size: 40px;
+}
+body #nowShowingInCinemaSect #straightCon #nLeft {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.3), black);
+}
+body #nowShowingInCinemaSect #straightCon #nRight {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), black);
+  right: 0;
+}
+body #nowShowingInCinemaSect #straightCon #cardsCon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow-y: hidden;
+}
+body #nowShowingInCinemaSect #straightCon #cardsCon #cardsDiv {
+  width: 100%;
+  height: 100%;
+}
+body #nowShowingInCinemaSect #straightCon #cardsCon #cardsDiv #card {
+  width: 220px;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #FB8500, #FFB703);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  transition: all 0.5s ease-in;
+}
+body #nowShowingInCinemaSect #straightCon #cardsCon #cardsDiv #card #border {
+  width: 95%;
+  height: 97%;
+  border-radius: 25px;
+  background-color: #8ECAE6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body #nowShowingInCinemaSect #straightCon #cardsCon #cardsDiv #card #border #overlayCon {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.5s;
+}
+body #nowShowingInCinemaSect #straightCon #cardsCon #cardsDiv #card #border #overlayCon #overlay {
+  text-align: center;
+  margin-bottom: 40%;
+}
+body #nowShowingInCinemaSect #straightCon #cardsCon #cardsDiv #card #border:hover #overlayCon {
+  bottom: 0;
+  height: 100%;
+}
+body #nowShowingInCinemaSect #straightCon #cardsCon #cardsDiv #card:hover {
+  transform: scale(150%) translateY(18%);
+}
+body #nowShowingInCinemaSect #straightCon #cardsCon::-webkit-scrollbar {
+  height: 8px;
+  padding: 0px;
+  margin: 0px;
+  color: #FB8500;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body #comingSoonSect {
+  margin-top: 30px;
+  width: 100%;
+  height: 390px;
+  background-color: #8ECAE6;
+}
+body #comingSoonSect #subHeading {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+body #comingSoonSect #subHeading h4 {
+  font-weight: bolder;
+}
+body #comingSoonSect #subHeading a {
+  margin-left: 10px;
+  font-weight: bold;
+}
+body #comingSoonSect #straightCon {
+  width: 100%;
+  height: 85%;
+  display: flex;
+}
+body #comingSoonSect #straightCon #cLeft, body #comingSoonSect #straightCon #cRight {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 9%;
+  height: 330px;
+  z-index: 0;
+}
+body #comingSoonSect #straightCon #cLeft button, body #comingSoonSect #straightCon #cRight button {
+  color: white;
+  font-size: 40px;
+}
+body #comingSoonSect #straightCon #cLeft {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.3), black);
+}
+body #comingSoonSect #straightCon #cRight {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), black);
+  right: 0;
+}
+body #comingSoonSect #straightCon #ccardsCon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow-y: hidden;
+}
+body #comingSoonSect #straightCon #ccardsCon #cardsDiv {
+  width: 100%;
+  height: 100%;
+}
+body #comingSoonSect #straightCon #ccardsCon #cardsDiv #card {
+  width: 220px;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #FB8500, #FFB703);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  transition: all 0.5s ease-in;
+}
+body #comingSoonSect #straightCon #ccardsCon #cardsDiv #card #border {
+  width: 95%;
+  height: 97%;
+  border-radius: 25px;
+  background-color: #8ECAE6;
+  background-image: url("../Images/free-guy-poster.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body #comingSoonSect #straightCon #ccardsCon #cardsDiv #card #border #overlayCon {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.5s;
+  overflow: hidden;
+}
+body #comingSoonSect #straightCon #ccardsCon #cardsDiv #card #border #overlayCon #overlay {
+  text-align: center;
+  margin-bottom: 40%;
+}
+body #comingSoonSect #straightCon #ccardsCon #cardsDiv #card #border:hover #overlayCon {
+  bottom: 0;
+  height: 100%;
+}
+body #comingSoonSect #straightCon #ccardsCon #cardsDiv #card:hover {
+  transform: scale(150%) translateY(18%);
+}
+body #footerSect {
+  margin-top: 40px;
+  background-color: #023047;
+}
+body #footerSect #footerRow {
+  padding-top: 40px;
+  margin: 0;
+  height: auto;
+}
+body #footerSect #footerRow #companyCol h5 {
+  color: white;
+  text-align: center;
+}
+body #footerSect #footerRow #companyCol p {
+  color: lightgray;
+}
+body #footerSect #footerRow #companyCol Address {
+  color: white;
+}
+body #footerSect #footerRow #faqsCol h5 {
+  color: white;
+  text-align: center;
+}
+body #footerSect #footerRow #faqsCol div a {
+  display: block;
+}
+body #footerSect #footerRow #contactCol {
+  color: lightgray;
+}
+body #footerSect #footerRow #contactCol h5 {
+  text-align: center;
+  text-align: center;
+}
+body #footerSect #footerRow #contactCol #contactUsLinks {
+  padding-left: 20 px;
+  font-size: 20px;
+}
+body #footerSect #footerRow #contactCol #contactUsLinks a {
+  display: block;
+}
+body #footerSect #footerRow #contactCol #contactUsLinks a i {
+  margin-right: 10px;
+}
+body #footerSect #footerRow #paymentCol h5 {
+  color: white;
+  text-align: center;
+}
+body #footerSect #footerRow #paymentCol div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body #footerSect #footerRow #paymentCol div img {
+  margin: 5px;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    padding-left: 25px;
+    padding-right: 25px;
+    justify-content: space-between !important;
+  }
+  nav #menuButtonDiv {
+    display: block !important;
+  }
+  nav #menuButtonDiv #navMenuSm {
+    display: none;
+  }
+  nav #middleNavDiv {
+    display: none;
+  }
+}
+.to div:first-child {
+  width: 130% !important;
+  transform: rotateZ(45deg) translateY(115%) translateX(7%);
+}
+.to div:nth-child(2) {
+  opacity: 0;
+}
+.to div:last-child {
+  width: 130% !important;
+  transform: rotateZ(-45deg) translateY(-140%) translateX(10%);
+}
+
+/*# sourceMappingURL=Index.css.map */

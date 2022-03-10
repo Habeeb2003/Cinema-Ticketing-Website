@@ -1,0 +1,30 @@
+$LightConflowerBlue: #8ECAE6;
+$BlueGreen: #219EBC;
+$PrussianBlue: #023047;
+$HoneyYellow: #FFB703;
+$Orange: #FB8500;
+
+body{
+    main{
+        nav{
+            width: 15vw;
+            height: 100vh;
+            background-color: transparent;
+            background-color: $PrussianBlue;
+            position: fixed;
+        }
+        #dash{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            #dash2{
+                width: 20vw;
+                height: 100vh;
+                background-color: $BlueGreen;
+            }
+            #main{
+                width: 80vw;
+            }
+        }
+    }
+}
